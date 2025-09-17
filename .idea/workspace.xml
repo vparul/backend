@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7d30ce-bcad-450c-a082-8ffcbb9c674d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstSpring/src/main/java/com/embarkx/FirstSpring/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FirstSpring/src/main/java/com/embarkx/FirstSpring/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstSpring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/FirstSpring/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
