@@ -1,6 +1,6 @@
 package com.app.ecom;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
 public class User {
