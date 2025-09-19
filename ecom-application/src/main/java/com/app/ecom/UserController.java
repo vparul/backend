@@ -1,7 +1,6 @@
 package com.app.ecom;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,14 +20,16 @@ public class UserController {
 
     @GetMapping("/api/users/{id}")
     public ResponseEntity<User> fetchSingleUser(@PathVariable Long id) {
-        User user = userService.fetchSingleUser(id);
-        if (user != null) {
-            return ResponseEntity.ok(user);
-//            return new ResponseEntity<>(user, HttpStatus.OK);
-        } else {
-            return ResponseEntity.notFound().build();
-//            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        }
+        return userService.fetchSingleUser(id).map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+//        Optional<User> user = userService.fetchSingleUser(id);
+//        if (user != null) {
+//            return ResponseEntity.ok(user);
+////            return new ResponseEntity<>(user, HttpStatus.OK);
+//        } else {
+//            return ResponseEntity.notFound().build();
+////            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+//        }
     }
 
     @PostMapping("/api/user")
